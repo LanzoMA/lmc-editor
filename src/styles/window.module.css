@@ -1,0 +1,12 @@
+.window {
+    background-color: var(--surface-color);
+    border-radius: 1em;
+    flex: 1;
+    padding: 1em;
+    font-weight: 700;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,34 @@
+:root {
+    --background-color: #0d101e;
+    --surface-color: #73778b;
+    --on-surface-color: #fff;
+    --primary-color: #629be5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    background-color: var(--background-color);
+    color: var(--on-surface-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    padding: 1em;
+    gap: 1em;
+}
+
+button {
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-weight: 700;
+}

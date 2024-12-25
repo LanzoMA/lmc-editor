@@ -1,0 +1,14 @@
+nav {
+    background-color: var(--surface-color);
+    padding: 1em;
+}
+
+ul {
+    display: flex;
+    gap: 1em;
+}
+
+.navigation-item {
+    list-style: none;
+    font-weight: 700;
+}

@@ -1,0 +1,4 @@
+.run-button {
+    background-color: var(--primary-color);
+    color: var(--on-surface-color);
+}

@@ -1,0 +1,6 @@
+.output-pane {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1em;
+}

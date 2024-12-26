@@ -137,24 +137,24 @@ export function run(
         const instruction = ram[programCounter];
 
         switch (true) {
-            // HLT Instruction
+            // HLT (Halt) Instruction
             case instruction === 0:
                 running = false;
                 break;
 
-            // ADD Instruction
+            // ADD (Addition) Instruction
             case instruction < 200:
                 dataLocation = instruction - 100;
                 accumulator += ram[dataLocation];
                 break;
 
-            // SUB Instruction
+            // SUB (Subtraction) Instruction
             case instruction < 300:
                 dataLocation = instruction - 200;
                 accumulator -= ram[dataLocation];
                 break;
 
-            // STA/STO Instruction
+            // STA/STO (Store) Instruction
             case instruction < 400:
                 dataLocation = instruction - 300;
 
@@ -169,22 +169,26 @@ export function run(
             // Instructions that start with 4XX do not exist
             case instruction < 500:
                 running = false;
+
                 setTimeout(() => {
                     setOutput(`Invalid instruction: ${instruction}`)
                 }, 0);
 
                 break;
 
+            // LDA (Load) Instruction
             case instruction < 600:
                 dataLocation = instruction - 500;
                 accumulator = ram[dataLocation];
                 break;
 
+            // BRA (Branch Always) Instruction
             case instruction < 700:
                 dataLocation = instruction - 600;
                 programCounter = dataLocation - 1;
                 break;
 
+            // BRZ (Branch If Zero) Instruction
             case instruction < 800:
                 if (accumulator === 0) {
                     dataLocation = instruction - 700;
@@ -193,6 +197,7 @@ export function run(
 
                 break;
 
+            // BRP (Branch If Positive) Instruction
             case instruction < 900:
                 if (accumulator >= 0) {
                     dataLocation = instruction - 800;
@@ -201,10 +206,12 @@ export function run(
 
                 break;
 
+            // INP (Input) Instruction
             case instruction === 901:
                 accumulator = Number(prompt('Input: '));
                 break;
 
+            // OUT (Output) Instruction
             case instruction === 902:
                 output += '\n' + accumulator.toString();
 

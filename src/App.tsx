@@ -5,7 +5,7 @@ import OutputWindow from './components/OutputWindow';
 import RamContentsWindow from './components/RamContentsWindow';
 import styles from './styles/output-pane.module.css';
 import { assembleIntoRam } from './utils/lmc-compiler';
-import { run } from './utils/old-lmc-compiler';
+import { run } from './utils/legacy-lmc-compiler';
 
 function App() {
   const [code, setCode] = useState('');

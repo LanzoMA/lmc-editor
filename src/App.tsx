@@ -4,7 +4,8 @@ import NavigationBar from './components/NavigationBar';
 import OutputWindow from './components/OutputWindow';
 import RamContentsWindow from './components/RamContentsWindow';
 import styles from './styles/output-pane.module.css';
-import { assembleIntoRam, run } from './utils/lmc-compiler';
+import { assembleIntoRam } from './utils/lmc-compiler';
+import { run } from './utils/old-lmc-compiler';
 
 function App() {
   const [code, setCode] = useState('');
@@ -12,7 +13,7 @@ function App() {
   const [output, setOutput] = useState('');
 
   useEffect(() => {
-    setCode('INP\nOUT')
+    setCode('INP\nBRA x\nINP\nx OUT')
   }, []);
 
   useEffect(() => {

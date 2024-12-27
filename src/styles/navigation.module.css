@@ -3,7 +3,7 @@ nav {
     padding: 1em;
 }
 
-ul {
+.navigation-list {
     display: flex;
     gap: 1em;
 }

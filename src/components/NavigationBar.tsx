@@ -4,7 +4,9 @@ function NavigationBar() {
     return <nav>
         <ul>
             <li className={styles['navigation-item']}>About</li>
-            <li className={styles['navigation-item']}>Examples</li>
+            <li className={styles['navigation-item']}>
+                <a href='https://www.vivaxsolutions.com/web/lmc.aspx'>Examples</a>
+            </li>
         </ul>
     </nav>
 }

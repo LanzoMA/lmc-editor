@@ -33,3 +33,8 @@ button {
     border-radius: 0.5em;
     font-weight: 700;
 }
+
+a {
+    color: var(--on-surface-color);
+    text-decoration: none;
+}
